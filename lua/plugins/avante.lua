@@ -7,7 +7,6 @@ return {
 		"yetone/avante.nvim",
 		dependencies = {
 			{ "HakonHarnes/img-clip.nvim", pin = true },
-			{ "MeanderingProgrammer/render-markdown.nvim", pin = true },
 			{ "MunifTanjim/nui.nvim", pin = true },
 			{ "echasnovski/mini.icons", pin = true },
 			{ "nvim-lua/plenary.nvim", pin = true },
