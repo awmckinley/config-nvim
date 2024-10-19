@@ -13,6 +13,16 @@ custom.autocmd({ "FileType" }, {
 	end,
 })
 
+custom.autocmd({ "FileType" }, {
+	pattern = {
+		"NeogitDiffView",
+		"NeogitStatus",
+	},
+	callback = function()
+		vim.opt_local.tabstop = 4
+	end,
+})
+
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
