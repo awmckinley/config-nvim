@@ -47,6 +47,7 @@ require("lazy").setup({
 		{ import = "plugins.ft.cs" },
 		{ import = "plugins.ft.d2" },
 		{ import = "plugins.ft.elixir" },
+		{ import = "plugins.ft.git" },
 		{ import = "plugins.ft.go" },
 		{ import = "plugins.ft.html" },
 		{ import = "plugins.ft.java" },
