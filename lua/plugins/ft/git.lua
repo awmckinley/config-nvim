@@ -4,6 +4,15 @@ Git configuration.
 
 local custom = require("custom.util")
 
+custom.autocmd({ "FileType" }, {
+	pattern = {
+		"NeogitCommitMessage",
+	},
+	callback = function()
+		custom.source("gitcommit")
+	end,
+})
+
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
