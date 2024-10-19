@@ -6,6 +6,7 @@ return {
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
+			{ "antoinemadec/FixCursorHold.nvim", pin = true },
 			{ "nvim-lua/plenary.nvim", pin = true },
 			{ "nvim-neotest/neotest-jest", pin = true },
 			{ "nvim-neotest/nvim-nio", pin = true },
