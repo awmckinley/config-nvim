@@ -26,4 +26,13 @@ return {
 			})
 		end,
 	},
+
+	{
+		"stevearc/overseer.nvim",
+		opts = function(_, opts)
+			custom.list_extend_unique(opts.templates, {
+				"user.python",
+			})
+		end,
+	},
 }
