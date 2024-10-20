@@ -2,7 +2,7 @@
 Python configuration.
 --]]
 
-require("custom.lsp.pyright")
+require("custom.lsp.basedpyright")
 local custom = require("custom.util")
 
 return {
