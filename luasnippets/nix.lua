@@ -12,6 +12,29 @@ local fmta = require("luasnip.extras.fmt").fmta
 return {
 	s(
 		{
+			trig = "crx",
+			desc = "Chromium extension",
+		},
+		fmta(
+			[[
+{
+  # <a>
+  id = "";
+  version = "";
+  crxPath = builtins.fetchurl {
+    url = "";
+    sha256 = "";
+  };
+}
+		]],
+			{
+				a = i(1, "name"),
+			}
+		)
+	),
+
+	s(
+		{
 			trig = "imports",
 			desc = "import modules",
 		},
