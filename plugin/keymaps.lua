@@ -28,31 +28,3 @@ vim.keymap.set("n", "<Leader>ce", "<Cmd>.lua<CR>", {
 vim.keymap.set("n", "<Leader>cE", "<Cmd>source %<CR>", {
 	desc = "Execute the current file",
 })
-
--- run Lazygit in directory of current file
-vim.keymap.set("n", "<Leader>gl", function()
-	local cwd = vim.fn.getcwd()
-	local file = vim.fn.resolve(vim.fn.expand("%"))
-	if file ~= "" then
-		cwd = vim.fn.fnamemodify(file, ":p:h")
-	end
-	-- fix cwd in oil buffers
-	cwd = string.gsub(cwd, "oil:", "")
-	require("lazy.util").float_term({
-		"lazygit",
-	}, {
-		cwd = cwd,
-		margin = {
-			top = 1,
-			right = 2,
-			bottom = 3,
-			left = 2,
-		},
-		size = {
-			width = vim.o.columns,
-			height = vim.o.lines,
-		},
-	})
-end, {
-	desc = "Lazygit",
-})

@@ -60,6 +60,20 @@ M.dump_signs = function()
 end
 
 --[[
+Return the correct root directory for a git project.
+--]]
+M.git_dir = function()
+	local cwd = vim.fn.getcwd()
+	local file = vim.fn.resolve(vim.fn.expand("%"))
+	if file ~= "" then
+		cwd = vim.fn.fnamemodify(file, ":p:h")
+	end
+	-- fix cwd in oil buffers
+	cwd = string.gsub(cwd, "oil:", "")
+	return cwd
+end
+
+--[[
 Configure indentation with spaces.
 --]]
 M.indent_with_spaces = function(shiftwidth)
