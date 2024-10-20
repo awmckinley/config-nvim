@@ -9,6 +9,9 @@ return {
 	{
 		"stevearc/overseer.nvim",
 		opts = {
+			strategy = {
+				"jobstart",
+			},
 			templates = {
 				"builtin",
 			},
