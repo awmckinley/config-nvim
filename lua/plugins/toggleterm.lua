@@ -1,5 +1,17 @@
 --[[
 Easily manage multiple terminal windows.
+
+Similar:
+- benlubas/molten-nvim
+- CRAG666/code_runner.nvim
+- dccsillag/magma-nvim
+- GCBallesteros/NotebookNavigator.nvim
+- HiPhish/repl.nvim
+- jalvesaq/vimcmdline
+- jpalardy/vim-slime
+- kassio/neoterm
+- mtikekar/nvim-send-to-term
+- Vigemus/iron.nvim
 --]]
 
 local custom = require("custom.util")

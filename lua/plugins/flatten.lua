@@ -1,5 +1,8 @@
 --[[
 Open files and command output from terminals in your current Neovim instance.
+
+Similar:
+- samjwill/nvim-unception
 --]]
 
 return {
