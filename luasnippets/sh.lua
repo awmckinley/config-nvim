@@ -11,6 +11,16 @@ local fmt = require("luasnip.extras.fmt").fmt
 return {
 	s(
 		{
+			trig = "#!",
+			desc = "shebang",
+		},
+		t({
+			"#!/usr/bin/env python",
+		})
+	),
+
+	s(
+		{
 			trig = "has",
 			desc = "command exists?",
 		},

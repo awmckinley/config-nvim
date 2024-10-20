@@ -5,6 +5,16 @@ local t = ls.text_node
 return {
 	s(
 		{
+			trig = "#!",
+			desc = "shebang",
+		},
+		t({
+			"#!/usr/bin/env -S just --justfile",
+		})
+	),
+
+	s(
+		{
 			trig = "help",
 			desc = "add help recipe",
 		},
