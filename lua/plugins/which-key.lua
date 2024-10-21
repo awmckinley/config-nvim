@@ -45,6 +45,7 @@ return {
 				{
 					"<Leader>a",
 					group = "ai",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>b",
@@ -53,10 +54,12 @@ return {
 				{
 					"<Leader>c",
 					group = "code",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>d",
 					group = "debug",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>f",
@@ -65,10 +68,12 @@ return {
 				{
 					"<Leader>g",
 					group = "git",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>gh",
 					group = "hunks",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>m",
@@ -97,6 +102,7 @@ return {
 				{
 					"<Leader>s",
 					group = "search",
+					mode = { "n", "v" },
 				},
 				{
 					"<Leader>t",
