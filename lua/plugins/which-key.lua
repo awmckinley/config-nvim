@@ -100,6 +100,15 @@ return {
 					},
 				},
 				{
+					"<leader>r",
+					group = "refactor",
+					icon = {
+						icon = " ",
+						color = "orange",
+					},
+					mode = { "n", "v" },
+				},
+				{
 					"<Leader>s",
 					group = "search",
 					mode = { "n", "v" },
