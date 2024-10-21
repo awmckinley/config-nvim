@@ -42,6 +42,7 @@ return {
 				desc = "LSP lines",
 			},
 		},
+		lazy = false,
 		pin = true,
 	},
 }
