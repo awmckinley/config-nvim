@@ -30,7 +30,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 -- filetype mappings use <LocalLeader>
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = " "
 
 -- setup lazy.nvim
 require("lazy").setup({
