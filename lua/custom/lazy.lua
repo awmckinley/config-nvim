@@ -62,6 +62,7 @@ require("lazy").setup({
 		{ import = "plugins.ft.ocaml" },
 		{ import = "plugins.ft.php" },
 		{ import = "plugins.ft.python" },
+		{ import = "plugins.ft.ruby" },
 		{ import = "plugins.ft.rust" },
 		{ import = "plugins.ft.sh" },
 		{ import = "plugins.ft.sql" },
