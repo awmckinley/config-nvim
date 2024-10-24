@@ -19,6 +19,7 @@ end
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		cond = true,
 		opts = {
 			-- required parsers
 			ensure_installed = {
