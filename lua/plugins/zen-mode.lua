@@ -16,10 +16,17 @@ return {
 			window = {
 				backdrop = 0.7,
 				width = 80,
+				options = {
+					signcolumn = "no",
+					number = false,
+					relativenumber = false,
+					cursorline = true,
+					list = false,
+				},
 			},
 			plugins = {
 				gitsigns = {
-					enabled = true,
+					enabled = false,
 				},
 				tmux = {
 					enabled = vim.env.TMUX ~= nil,
