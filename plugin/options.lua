@@ -21,9 +21,9 @@ vim.opt.completeopt = {
 	"noselect",
 }
 
--- aggressive concealment
-vim.opt.concealcursor = "nc"
-vim.opt.conceallevel = 3
+-- use concealment
+vim.opt.concealcursor = ""
+vim.opt.conceallevel = 2
 
 -- use histogram algorithm for diff mode
 vim.opt.diffopt = {
