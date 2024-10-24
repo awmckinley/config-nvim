@@ -16,7 +16,7 @@ return {
 		fmt(
 			[[
 github.com/{a}/{b}:
-  path: github.com/{a}/{b}
+  path: ~/Code/github.com/{a}/{b}
   url: https://github.com/{a}/{b}
 			]],
 			{
