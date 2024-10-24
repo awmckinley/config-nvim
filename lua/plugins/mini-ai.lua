@@ -14,6 +14,7 @@ return {
 			{ "nvim-treesitter/nvim-treesitter", pin = true },
 			{ "nvim-treesitter/nvim-treesitter-textobjects", pin = true },
 		},
+		cond = true,
 		opts = function()
 			local spec_treesitter = require("mini.ai").gen_spec.treesitter
 			return {
