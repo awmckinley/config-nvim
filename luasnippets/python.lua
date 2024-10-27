@@ -16,4 +16,14 @@ return {
 			"#!/usr/bin/env python",
 		})
 	),
+
+	s(
+		{
+			trig = "main",
+			desc = "main",
+		},
+		t({
+			'if __name__ == "__main__":',
+		})
+	),
 }
