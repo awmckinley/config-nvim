@@ -5,6 +5,12 @@ Ruby configuration.
 require("custom.lsp.ruby_lsp")
 local custom = require("custom.util")
 
+vim.filetype.add({
+	filename = {
+		["Podfile"] = "ruby",
+	},
+})
+
 return {
 	{
 		"stevearc/conform.nvim",
@@ -23,7 +29,7 @@ return {
 			},
 			formatters_by_ft = {
 				eruby = {
-					"erb-format",
+					"erb_format",
 				},
 				ruby = {
 					"rubocop",

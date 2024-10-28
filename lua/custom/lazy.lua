@@ -43,6 +43,7 @@ require("lazy").setup({
 		-- load specs
 		{ import = "plugins" },
 		-- load filetypes
+		{ import = "plugins.ft.bicep" },
 		{ import = "plugins.ft.clojure" },
 		{ import = "plugins.ft.cs" },
 		{ import = "plugins.ft.d2" },
