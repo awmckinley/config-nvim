@@ -15,7 +15,7 @@ return {
 			desc = "shebang",
 		},
 		t({
-			"#!/usr/bin/env python",
+			"#!/usr/bin/env bash",
 		})
 	),
 
