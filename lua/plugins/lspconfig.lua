@@ -2,6 +2,8 @@
 LSP client.
 --]]
 
+local custom = require("custom.util")
+
 return {
 	{
 		"neovim/nvim-lspconfig",
@@ -12,7 +14,6 @@ return {
 		},
 		config = function()
 			-- triggered on lsp attach
-			local custom = require("custom.util")
 			custom.autocmd("LspAttach", {
 				callback = function()
 					local telescope = require("telescope.builtin")
@@ -66,6 +67,42 @@ return {
 						buffer = 0,
 						desc = "Rename symbol",
 						expr = true,
+					})
+
+					local clients = vim.lsp.get_clients()
+					for _, client in ipairs(clients) do
+						if client.server_capabilities.codeLensProvider then
+							vim.b.refresh_codelens = true
+						end
+
+						if client.name == "markdown_oxide" then
+							custom.user_command({
+								name = "OxideDaily",
+								desc = "Open daily note",
+								nargs = "*",
+								command = function(args)
+									local input = args.args
+									vim.lsp.buf.execute_command({
+										command = "jump",
+										arguments = { input },
+									})
+								end,
+							})
+						end
+					end
+
+					custom.autocmd({
+						"BufEnter",
+						"CursorHold",
+						"InsertLeave",
+						"TextChanged",
+					}, {
+						buffer = 0,
+						callback = function()
+							if vim.b.refresh_codelens then
+								vim.lsp.codelens.refresh({ bufnr = 0 })
+							end
+						end,
 					})
 				end,
 			})
