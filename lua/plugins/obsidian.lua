@@ -46,7 +46,7 @@ return {
 				return out
 			end,
 			templates = {
-				folder = "@Templates",
+				folder = "template",
 			},
 			picker = {
 				name = "telescope.nvim",
