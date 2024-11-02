@@ -19,5 +19,8 @@
     # extremely fast Python linter
     # replaces: black
     ruff
+
+    # tool to create isolated Python environments
+    virtualenv
   ];
 }
