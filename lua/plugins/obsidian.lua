@@ -35,6 +35,16 @@ return {
 				min_chars = 2,
 			},
 			wiki_link_func = "prepend_note_id",
+			note_frontmatter_func = function(note)
+				local out = note.metadata or {}
+				out.aliases = note.aliases
+				out.id = note.id
+				out.tags = note.tags
+				if out.title == nil then
+					out.title = note.id
+				end
+				return out
+			end,
 			templates = {
 				folder = "@Templates",
 			},
