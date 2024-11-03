@@ -2,8 +2,10 @@
 Professional PHP tooling.
 --]]
 
-if vim.fn.executable("intelephense") == 1 then
-	require("lspconfig").intelephense.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("intelephense") == 1 then
+	lspconfig.intelephense.setup({
 		capabilities = require("custom.util").capabilities(),
 	})
 end

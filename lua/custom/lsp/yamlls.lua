@@ -2,8 +2,10 @@
 Language server for YAML files.
 --]]
 
-if vim.fn.executable("yaml-language-server") == 1 then
-	require("lspconfig").yamlls.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("yaml-language-server") == 1 then
+	lspconfig.yamlls.setup({
 		capabilities = require("custom.util").capabilities(),
 		settings = {
 			yaml = {

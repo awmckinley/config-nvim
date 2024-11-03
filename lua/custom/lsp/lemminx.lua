@@ -2,8 +2,10 @@
 XML language server.
 --]]
 
-if vim.fn.executable("lemminx") == 1 then
-	require("lspconfig").lemminx.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("lemminx") == 1 then
+	lspconfig.lemminx.setup({
 		capabilities = require("custom.util").capabilities(),
 	})
 end

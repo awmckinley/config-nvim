@@ -2,8 +2,10 @@
 Language Server Protocol frontend for Harper.
 --]]
 
-if vim.fn.executable("harper-ls") == 1 then
-	require("lspconfig").harper_ls.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("harper-ls") == 1 then
+	lspconfig.harper_ls.setup({
 		capabilities = require("custom.util").capabilities(),
 		settings = {
 			["harper-ls"] = {

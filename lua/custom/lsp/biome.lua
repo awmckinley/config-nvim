@@ -2,8 +2,10 @@
 Toolchain of the web.
 --]]
 
-if vim.fn.executable("biome") == 1 then
-	require("lspconfig").biome.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("biome") == 1 then
+	lspconfig.biome.setup({
 		capabilities = require("custom.util").capabilities(),
 	})
 end

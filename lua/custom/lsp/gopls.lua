@@ -2,8 +2,10 @@
 Official Go language server.
 --]]
 
-if vim.fn.executable("gopls") == 1 then
-	require("lspconfig").gopls.setup({
+local ok, lspconfig = pcall(require, "lspconfig")
+
+if ok and vim.fn.executable("gopls") == 1 then
+	lspconfig.gopls.setup({
 		capabilities = require("custom.util").capabilities(),
 		settings = {
 			gopls = {
