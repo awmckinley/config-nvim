@@ -24,7 +24,7 @@ return {
 			},
 			log_level = vim.log.levels.INFO,
 			daily_notes = {
-				folder = "Calendar",
+				folder = "calendar",
 				date_format = "%Y/%Y-%m-%d",
 				default_tags = {
 					"daily-notes",
