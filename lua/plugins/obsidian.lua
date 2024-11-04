@@ -38,7 +38,8 @@ return {
 			note_frontmatter_func = function(note)
 				local out = note.metadata or {}
 				out.aliases = note.aliases
-				out.id = note.id
+				out.created = nil
+				out.id = vim.fn.fnamemodify(note.path.filename, ":t:r")
 				out.tags = note.tags
 				if out.title == nil then
 					out.title = note.id
