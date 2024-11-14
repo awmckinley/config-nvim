@@ -2,7 +2,7 @@
   description = "My Neovim Nix modules.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?rev=ccc0c2126893dd20963580b6478d1a10a4512185";
+    nixpkgs.url = "github:NixOS/nixpkgs?rev=ad3f60580aa2bbc095050867deb0e0335c2269f1";
   };
 
   outputs =
