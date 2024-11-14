@@ -17,6 +17,9 @@
     # fast, disk space efficient package manager for JavaScript
     pnpm
 
+    # Prettier, as a daemon, for improved formatting speed
+    prettierd
+
     # intelligent Tailwind CSS tooling
     tailwindcss-language-server
 

@@ -19,12 +19,19 @@ return {
 	{
 		"stevearc/conform.nvim",
 		opts = {
+			formattters = {
+				prettierd = {
+					require_cwd = true,
+				},
+			},
 			formatters_by_ft = {
 				json = {
 					"biome",
+					"prettierd",
 				},
 				jsonc = {
 					"biome",
+					"prettierd",
 				},
 			},
 		},
