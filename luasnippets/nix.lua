@@ -12,6 +12,28 @@ local fmta = require("luasnip.extras.fmt").fmta
 return {
 	s(
 		{
+			trig = "brew",
+			desc = "Homebrew packages",
+		},
+		fmta(
+			[[
+{ isDarwin, lib, ... }:
+{ }
+// lib.optionalAttrs isDarwin {
+  homebrew.casks = [
+    # description
+    "<a>"
+  ];
+}
+			]],
+			{
+				a = i(1, "hello"),
+			}
+		)
+	),
+
+	s(
+		{
 			trig = "crx",
 			desc = "Chromium extension",
 		},
