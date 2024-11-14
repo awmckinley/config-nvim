@@ -9,6 +9,13 @@
       ps: with ps; [
         # implementation of the Debug Adapter Protocol for Python
         debugpy
+
+        # Python library to read/write Excel 2010 xlsx/xlsm files
+        openpyxl
+
+        # powerful data structures for data analysis, time series, and statistics
+        pandas
+        pandas-stubs
       ]
     ))
 
