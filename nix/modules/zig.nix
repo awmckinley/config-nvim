@@ -2,6 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     # general-purpose programming language and toolchain
-    zig
+    zigpkgs."0.13.0"
   ];
 }
