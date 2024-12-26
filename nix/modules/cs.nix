@@ -1,5 +1,20 @@
-{ pkgs, ... }:
 {
+  isDarwin,
+  isLinux,
+  lib,
+  pkgs,
+  ...
+}:
+{ }
+// lib.optionalAttrs isDarwin {
+  homebrew.taps = [ "isen-ng/dotnet-sdk-versions" ];
+  homebrew.casks = [
+    # .NET SDK
+    "dotnet"
+    "isen-ng/dotnet-sdk-versions/dotnet-sdk9-0-100"
+  ];
+}
+// lib.optionalAttrs isLinux {
   environment.systemPackages = with pkgs; [
     # Roslyn-based LSP language server
     # replaces: omnisharp-roslyn
